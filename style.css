@@ -1,0 +1,174 @@
+/*
+=============== 
+Fonts
+===============
+*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+  /* dark shades of primary color*/
+
+  /* primary/main color */
+  --clr-primary: hsl(205, 89%, 60%);
+  /* lighter shades of primary color */
+
+  /* darkest grey - used for headings */
+  --clr-grey-1: hsl(209, 61%, 16%);
+  --clr-grey-2: hsl(211, 39%, 23%);
+  --clr-grey-3: hsl(209, 34%, 30%);
+  --clr-grey-4: hsl(209, 28%, 39%);
+  /* grey used for paragraphs */
+  --clr-grey-5: hsl(210, 22%, 49%);
+
+  --clr-white: #fff;
+  --clr-black: #000;
+  --transition: all 0.3s linear;
+  --spacing: 0.1rem;
+  --radius: 0.25rem;
+  --max-width: 1170px;
+  --fixed-width: 620px;
+}
+/* =============== 
+Styling
+=============== */
+section {
+  width: 85vw;
+  max-width: var(--fixed-width);
+  margin: 0 auto;
+  margin-top: 5rem;
+  text-align: center;
+  padding: 1rem 0;
+  /* set relative for buttons */
+  position: relative;
+}
+.reviews {
+  margin-bottom: 0.5rem;
+}
+.reviews h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.reviews span {
+  font-size: 0.85em;
+  color: var(--clr-primary);
+  margin-right: 1rem;
+}
+.img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 1px solid var(--clr-grey-5);
+  background: var(--clr-white);
+  padding: 0.25rem;
+  border-radius: 50%;
+  box-shadow: var(--dark-shadow);
+}
+h4 {
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--clr-black);
+  letter-spacing: var(--spacing);
+  margin: 0.5rem 0;
+}
+.title {
+  margin-bottom: 1.25rem;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+.text {
+  color: var(--clr-grey-5);
+  line-height: 1.8;
+  max-width: 35em;
+  margin: 0 auto;
+  letter-spacing: 1px;
+}
+.cv-btn {
+  background-color: var(--clr-primary);
+  color: var(--clr-white);
+  padding: 0.5rem;
+  border: 1px solid var(--clr-primary);
+}
+
+/* javascript CSS */
+.hds_slider {
+  height: 70vh;
+  position: relative;
+  --slide-transition-speed: 600ms;
+}
+.hds_slide {
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  top: -100%;
+}
+.hds_slide_active {
+  z-index: 1;
+  opacity: 1;
+  top: 0;
+}
+
+.hds_nav_item {
+  position: absolute;
+  top: 300px;
+  color: var(--clr-grey-1);
+  border-radius: 0.25rem;
+  border: transparent;
+  cursor: pointer;
+  font-size: 3rem;
+  padding: 0.35rem 0.5rem;
+  z-index: 2;
+}
+
+.hds_prev {
+  left: 0.5rem;
+}
+
+.hds_next {
+  right: 0.5rem;
+}
+
+.hds_pagination {
+  position: absolute;
+  bottom: 1.5rem;
+  z-index: 2;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.hds_pagination_item {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--clr-grey-5);
+  margin: 0 0.2em;
+  cursor: pointer;
+}
+
+.hds_pagination_item_active {
+  background-color: var(--clr-primary);
+  cursor: default;
+}
+/* Mobile setup */
+@media screen and (max-width: 768px) {
+  .hds_nav_item {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hds_pagination {
+    display: none !important;
+  }
+}

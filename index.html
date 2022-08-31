@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slider</title>
+    <style>
+      html,
+      .slide {
+        display: grid;
+        text-align: center;
+        place-items: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <section class="slider">
+      <article class="reviews">
+        <p>
+          <span>"</span>What a terrific job you have done on my CV _I nearly
+          cried when i saw it and read it _ Many,many thanks for the
+          professional and fantastic work you have done far on my CV.<span
+            >"</span
+          >
+        </p>
+      </article>
+      <div id="slider">
+        <div class="slide">
+          <div class="slide_content">
+            <img src="./assests/user1.jpg" alt="sara" class="img" />
+            <h3>John erik</h3>
+            <p>Product Manager</p>
+
+            <button class="cv-btn">Download CV</button>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide_content">
+            <img src="./assests/user3.jpg" alt="sara" class="img" />
+            <h3>Sara Maher</h3>
+            <p>This is some paragraph stuff eh</p>
+
+            <button class="cv-btn">Download CV</button>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide_content">
+            <img src="./assests/user2.jpg" alt="sara" class="img" />
+            <h3>Katrina Kenny</h3>
+            <p>Sector Specialist at Ministry of Education</p>
+
+            <button class="cv-btn">Download CV</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <link rel="stylesheet" type="text/css" href="style.css" media="all" />
+    <script type="text/javascript" src="script.js"></script>
+    <script>
+      MSL("#slider");
+    </script>
+  </body>
+</html>
